@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Reel | Vitoria Coelho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/vitoriacoelho" target="_blank" class="interactive">
+        <img src="./ASSETS/VECTORS/icon_linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="mailto:vitoria.rcoelho@gmail.com" class="interactive">
+        <img src="./ASSETS/VECTORS/icon_email.svg" alt="Email">
+      </a>
+      <a href="https://wa.me/5511913074747" target="_blank" class="interactive">
+        <img src="./ASSETS/VECTORS/icon_message.svg" alt="Chat">
+      </a>
+    </div>
+    <a href="index.html" class="logo">
+      <img src="./ASSETS/IMAGES/logo site.png" alt="Vitoria Coelho Logo">
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section style="padding-top: 7.5vh; text-align: center;">
+
+      <!-- Reel video in the center -->
+      <div class="reel-container interactive">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1087211444?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="REEL | VitoriaCoelho 2025mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+
+      <!-- Folders linking to projects -->
+      <div class="folders-grid" id="folders-container">
+        <!-- Javascript will inject folder items here -->
+      </div>
+
+    </section>
+
+    <div style="text-align: center; padding: 1.2rem 0; margin-top: 0.8rem;">
+      <img src="./ASSETS/VECTORS/SVG_Star.svg" alt="Star Footer" style="height: 60px;">
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+  <script>
+    const projects = [
+      { id: 'WFI', title: 'Women for Independence', category: 'documentary', thumb: 'thumb_WFI.png' },
+      { id: 'NFL', title: 'Superbowl XL | geTV', category: 'branded content', thumb: 'thumb_NFL-Masthead.png' },
+      { id: 'Whales', title: 'Whales of the Brazilian Coast', category: 'journalism', thumb: 'thumb_Whales.png' },
+      { id: 'American-Elections', title: '2024 American Elections | g1', category: 'journalism', thumb: 'thumb_AmericanElections.png' },
+      { id: 'Stormwind', title: 'Stormwind Studios', category: 'branded content', thumb: 'thumb_StormwindStudios.png' },
+      { id: 'Safespace', title: 'SafeSpace', category: 'explainer', thumb: 'thumb_SafeSpace.jpg' },
+      { id: 'Cigana-Lyrics', title: 'Cigana | Baco Exu do Blues', category: 'personal project', thumb: 'thumb_Cigana.png' },
+      { id: 'Heartchain', title: 'Heartchain Visual', category: 'personal project', thumb: 'thumb_heartchain.png' },
+      { id: 'Maneskin', title: 'I Wanna Be Your Slave | Maneskin', category: 'personal project', thumb: 'thumb_Maneskin.jpg' }
+    ];
+
+    const container = document.getElementById('folders-container');
+
+    projects.forEach(project => {
+      const folderLink = document.createElement('a');
+      folderLink.href = `project.html?id=${project.id}`;
+      folderLink.className = 'folder-item interactive';
+
+      folderLink.innerHTML = `
+        <div class="folder-main">
+          <div class="name-tag">
+            <img src="./ASSETS/VECTORS/name_tag-folder.svg" alt="Name Tag">
+            <span>${project.title}</span>
+          </div>
+          <div class="folder-body">
+            <div class="category-tag">
+              <img src="./ASSETS/VECTORS/category-tag_folder.svg" alt="Category Tag">
+              <span>${project.category}</span>
+            </div>
+            <svg class="folder-svg" viewBox="0 0 562 366" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="folder-clip-${project.id}">
+                  <path d="M0 0H530.564C547.631 0 561.466 13.8352 561.466 30.9018V334.864C561.466 351.931 547.631 365.766 530.564 365.766H30.9018C13.8352 365.766 0 351.931 0 334.864V0Z"/>
+                </clipPath>
+              </defs>
+              <image href="./ASSETS/IMAGES/${project.thumb}" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#folder-clip-${project.id})" />
+              <path d="M0 0H530.564C547.631 0 561.466 13.8352 561.466 30.9018V334.864C561.466 351.931 547.631 365.766 530.564 365.766H30.9018C13.8352 365.766 0 351.931 0 334.864V0Z" fill="none" stroke="#FF1044" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(folderLink);
+    });
+  </script>
+</body>
+
+</html>
