@@ -122,7 +122,7 @@ header {
 }
 
 .logo img {
-  height: 90px;
+  height: 126px; /* 40% bigger */
   width: auto;
 }
 
@@ -140,8 +140,31 @@ header {
   transition: transform 0.3s ease;
 }
 
-.social-icons a:hover img {
+.social-icons a:hover {
   transform: scale(1.1);
+}
+
+.email-copy-container {
+  position: relative;
+}
+
+.email-tooltip {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, 15px);
+  height: 40px;
+  width: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  pointer-events: none;
+}
+
+.email-tooltip.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
 }
 
 nav {
@@ -220,7 +243,7 @@ nav a:hover {
 }
 
 .portal-link img.click-me {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Projects Folder Layout */
@@ -482,19 +505,220 @@ nav a:hover {
   right: -12%;
 }
 
+/* Hamburger Menu (Hidden by default on desktop) */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;
+  height: 45px;
+  background-color: #FF1044;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  grid-column: 3;
+  justify-self: end;
+  padding: 12px 10px;
+  border-radius: 8px;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger-menu.is-open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.is-open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.75);
+  /* 20% more transparent */
+  backdrop-filter: blur(25px);
+  /* Increased blur */
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.4s ease-in-out;
+}
+
+.mobile-drawer.is-open {
+  right: 0;
+}
+
+.close-drawer {
+  position: absolute;
+  top: 1.5rem;
+  right: 5%;
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 1100;
+  transition: color 0.3s ease;
+}
+
+.close-drawer:active {
+  color: #FF1044;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-nav a {
+  font-size: 1.28rem;
+  /* 20% smaller */
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 400;
+  /* Regular */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-nav a:active {
+  color: #FF1044;
+}
+
+.email-copy-container-mobile {
+  position: relative;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+
+  /* Hide Desktop elements */
+  .social-icons,
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show Hamburger */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .logo img {
+    height: 36px;
+    /* 20% bigger than previous mobile size */
+  }
+
+  /* Homepage Portal */
+  .portal-link img {
+    height: 212px;
+    /* 15% smaller than 250px */
+  }
+
+  /* Projects Grid (Main Page) */
+  .folders-grid {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 12px 8px; /* Reduced by 50% */
+  }
+
+
+  .name-tag span {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .folder-item.is-visible .category-tag {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* About Page Mobile */
   .about-section {
     grid-template-columns: 1fr;
   }
 
-  .about-images-container {
-    min-height: 500px;
-    margin-top: 2rem;
+  .about-text p {
+    font-size: 14px;
+    /* Reduced text size */
   }
 
-  .img-vitoria {
-    top: 200px;
+  .about-images-container {
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  /* Project Page Boxes and Media adjustments */
+  .project-info-layout {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-details-box {
+    background-size: cover;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .project-browser-box {
+    background: none;
+    border: 1px solid #1CD5F4;
+    border-radius: 25px;
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  .project-browser-box::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 38px;
+    background-color: #1CD5F4;
+    background-image:
+      radial-gradient(circle at 28.5px 19px, #FF1044 6.5px, transparent 6.5px),
+      radial-gradient(circle at 50.5px 19px, #F3FF89 6.5px, transparent 6.5px),
+      radial-gradient(circle at 72.5px 19px, #72FCBA 6.5px, transparent 6.5px);
+  }
+
+  .details-content {
+    padding: 20px 25px;
+  }
+
+  .browser-content {
+    padding: 20px 25px;
+  }
+
+  .project-main-title {
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  /* Make sure grids break down to 1 column */
+  .project-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-hero-left .media-item:first-child {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -559,7 +783,7 @@ nav a:hover {
 }
 
 .browser-content {
-  padding: 50px 40px 30px 40px; 
+  padding: 50px 40px 30px 40px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -584,24 +808,28 @@ nav a:hover {
   border-radius: 16px;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 16 / 9; /* gives nice rectangular proportions */
+  aspect-ratio: 16 / 9;
+  /* gives nice rectangular proportions */
 }
 
 .media-item.full-width {
   grid-column: 1 / -1;
-  aspect-ratio: 16 / 9; /* 1920x1080 aspect ratio */
+  aspect-ratio: 16 / 9;
+  /* 1920x1080 aspect ratio */
 }
 
 /* Specific Layouts */
 .project-media-grid.layout-hero-left {
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .layout-hero-left .media-item:first-child {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
   aspect-ratio: auto;
   height: 100%;
 }
+
 .layout-hero-left .media-item {
   aspect-ratio: 16 / 9;
 }
@@ -610,10 +838,37 @@ nav a:hover {
   .project-info-layout {
     flex-direction: column;
   }
+
   .project-media-grid {
     grid-template-columns: 1fr;
   }
+
   .media-item.full-width {
     aspect-ratio: 16 / 9;
+  }
+
+  .project-browser-box {
+    background: none;
+    border: 1px solid #1CD5F4;
+    border-radius: 25px;
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  .project-browser-box::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 38px;
+    background-color: #1CD5F4;
+    background-image:
+      radial-gradient(circle at 28.5px 19px, #FF1044 6.5px, transparent 6.5px),
+      radial-gradient(circle at 50.5px 19px, #F3FF89 6.5px, transparent 6.5px),
+      radial-gradient(circle at 72.5px 19px, #72FCBA 6.5px, transparent 6.5px);
+  }
+
+  .browser-content {
+    padding: 20px 25px;
   }
 }

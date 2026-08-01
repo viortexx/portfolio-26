@@ -15,20 +15,38 @@
       <a href="https://www.linkedin.com/in/vitoriacoelho" target="_blank" class="interactive">
         <img src="./ASSETS/VECTORS/icon_linkedin.svg" alt="LinkedIn">
       </a>
-      <a href="mailto:vitoria.rcoelho@gmail.com" class="interactive">
+      <a href="#" onclick="copyEmail(event)" class="interactive email-copy-container">
         <img src="./ASSETS/VECTORS/icon_email.svg" alt="Email">
-      </a>
-      <a href="https://wa.me/5511913074747" target="_blank" class="interactive">
-        <img src="./ASSETS/VECTORS/icon_message.svg" alt="Chat">
+        <img src="./ASSETS/IMAGES/Popup-email.svg" alt="Email Copied" class="email-tooltip">
       </a>
     </div>
     <a href="projects.html" class="logo">
       <img src="./ASSETS/IMAGES/logo site.png" alt="Vitoria Coelho Logo">
     </a>
-    <nav>
+    <nav class="desktop-nav">
       <a href="about.html">About</a>
     </nav>
+    
+    <!-- Hamburger Menu Toggle -->
+    <button class="hamburger-menu" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="close-drawer" onclick="toggleMobileMenu()" aria-label="Close Menu">&times;</button>
+    <nav class="mobile-nav">
+      <a href="about.html">About</a>
+      <a href="https://www.linkedin.com/in/vitoriacoelho" target="_blank" class="interactive">LinkedIn</a>
+      <a href="#" onclick="copyEmail(event)" class="interactive email-copy-container-mobile">
+        vitoria.rcoelho@gmail.com
+        <img src="./ASSETS/IMAGES/Popup-email.svg" alt="Email Copied" class="email-tooltip">
+      </a>
+    </nav>
+  </div>
 
   <main class="container">
     <section style="padding-top: 7.5vh; text-align: center;">
