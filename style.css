@@ -890,6 +890,13 @@ nav a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 1.2rem;
   }
+  .name-tag span {
+    font-size: 0.72rem;
+  }
+  .folder-item.is-visible .category-tag {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Widescreen ONLY */

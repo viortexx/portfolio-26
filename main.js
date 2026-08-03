@@ -59,17 +59,31 @@ window.toggleMobileMenu = function() {
 // You can add global interactivity here if needed later.
 document.addEventListener('DOMContentLoaded', () => {
   // Intersection Observer for Main Page (projects_reel) folder items on mobile
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1200) {
     // Wait a brief moment to ensure dynamic injection is completed if any
     setTimeout(() => {
       const folderItems = document.querySelectorAll('.folder-item');
       if (folderItems.length > 0) {
         const folderObserver = new IntersectionObserver((entries) => {
+          const folderItemsArray = Array.from(folderItems);
           entries.forEach(entry => {
+            const index = folderItemsArray.indexOf(entry.target);
+            const isTablet = window.innerWidth > 768 && window.innerWidth <= 1200;
+            let partner = null;
+            
+            if (isTablet) {
+              const partnerIndex = index % 2 === 0 ? index + 1 : index - 1;
+              if (partnerIndex >= 0 && partnerIndex < folderItemsArray.length) {
+                partner = folderItemsArray[partnerIndex];
+              }
+            }
+
             if (entry.isIntersecting) {
               entry.target.classList.add('is-visible');
+              if (partner) partner.classList.add('is-visible');
             } else {
               entry.target.classList.remove('is-visible');
+              if (partner) partner.classList.remove('is-visible');
             }
           });
         }, {
