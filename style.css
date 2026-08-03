@@ -91,7 +91,7 @@ p {
 }
 
 .container {
-  padding: 90px 5% 50px;
+  padding: calc(241px - 7.5vh) 5% 50px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -324,8 +324,11 @@ nav a:hover {
   transform: translate(-50%, -50%);
   color: #FF1044;
   font-weight: 700;
-  font-size: clamp(0.6rem, 0.8vw, 0.9rem);
+  font-size: clamp(0.6rem, 0.8vw, 0.78rem);
   white-space: nowrap;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .name-tag {
@@ -349,9 +352,12 @@ nav a:hover {
   transform: translate(-50%, -50%);
   color: #ffffff;
   font-family: 'Filson Pro', sans-serif;
-  font-weight: 700;
-  font-size: clamp(0.55rem, 0.8vw, 0.95rem);
+  font-weight: 450;
+  font-size: clamp(0.55rem, 0.8vw, 0.78rem);
   white-space: nowrap;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .folder-body {
@@ -610,6 +616,9 @@ nav a:hover {
 /* Responsive */
 @media (max-width: 768px) {
 
+  .container {
+    padding: 90px 5% 50px;
+  }
   /* Hide Desktop elements */
   .social-icons,
   .desktop-nav {
@@ -622,7 +631,7 @@ nav a:hover {
   }
 
   .logo img {
-    height: 42px;
+    height: 48px;
   }
 
   /* Homepage Portal */
@@ -633,8 +642,10 @@ nav a:hover {
 
   /* Projects Grid (Main Page) */
   .folders-grid {
-    grid-template-columns: 1fr; /* 1 column */
-    gap: 12px 8px; /* Reduced by 50% */
+    grid-template-columns: 1fr;
+    /* 1 column */
+    gap: 12px 8px;
+    /* Reduced by 50% */
   }
 
 
@@ -651,6 +662,7 @@ nav a:hover {
   /* About Page Mobile */
   .about-section {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .about-text p {
@@ -702,7 +714,7 @@ nav a:hover {
 
 /* Project Page Layout */
 .project-page-section {
-  padding-top: 18vh;
+  padding-top: 5.76vh;
   padding-bottom: 5vh;
   display: flex;
   flex-direction: column;
@@ -714,7 +726,7 @@ nav a:hover {
   text-transform: none;
   color: var(--text-color);
   margin-bottom: 3rem;
-  font-weight: 800;
+  font-weight: 450;
   text-align: center;
 }
 
@@ -833,11 +845,36 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 
+  .project-media-grid.layout-hero-left {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-hero-left .media-item:first-child {
+    grid-column: auto;
+    grid-row: auto;
+    height: auto;
+  }
+
+  .layout-hero-left .media-item {
+    aspect-ratio: auto;
+  }
+
   .media-item.full-width {
     aspect-ratio: 16 / 9;
   }
 
   .browser-content {
     padding: 20px 25px;
+  }
+
+  .project-page-section {
+    padding-top: 4vh;
+  }
+}
+
+/* Widescreen ONLY */
+@media (min-width: 1560px) {
+  .category-tag span {
+    font-size: 0.55rem;
   }
 }

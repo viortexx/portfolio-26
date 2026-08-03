@@ -38,11 +38,22 @@ const projectsData = {
     "title": "Whales of the Brazilian Coast",
     "credits": [
       { "label": "Motion Design", "value": "Vitória Coelho" },
-      { "label": "3D handmodel", "value": "SketchFab" },
-      { "label": "Production and voiceover", "value": "Mariana Mendicelli" }
+      { "label": "Illustrations", "value": "Luisa Rivas" },
+      { "label": "Production and voiceover", "value": "Mariana Mendicelli (g1)" }
     ],
-    "description": "This is a video made with the Art Department of G1 News about the migration and annual appearance of humpback and right whales around the brazilian coast.",
-    "media": []
+    "description": "This is a video made with the Art Department of g1 news portal (part of brazilian TV channel GloboTV) about the migration and annual appearance of humpback and right whales around the brazilian coast.",
+    "media": [
+      { "type": "video", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/As gigantes da costa brasileira_1.mp4" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales_1.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales_2.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales_3.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales_4.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales2_1.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales2_2.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales2_3.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Whales-of-brazilian-coast/Whales2_4.gif" }
+
+    ]
   },
   "NFL": {
     "title": "Superbowl XL | geTV",
@@ -118,15 +129,15 @@ const projectsData = {
     "layout": "hero-left",
     "credits": [
       { "label": "Motion Design", "value": "Vitória Coelho" },
-      { "label": "3D assets", "value": "Guilherme de Oliveira Sousa" }
+      { "label": "3D stage scenario", "value": "Guilherme de Oliveira Sousa" }
     ],
     "description": "These visuals are part of a personal project, inspired by a friend's tattoo. They were created to be like a set of screens that could be used for concerts.",
     "media": [
-      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Vertical_2.gif" },
       { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Wide-2.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Vertical_2.gif" },
       { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Palco.gif" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_3DSolo_1.gif" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_3DTriple.gif" }
+      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_3DTriple.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_3DSolo_1.gif" }
     ]
   },
   "Maneskin": {
