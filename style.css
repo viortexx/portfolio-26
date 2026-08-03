@@ -91,7 +91,7 @@ p {
 }
 
 .container {
-  padding: calc(241px - 7.5vh) 5% 50px;
+  padding: calc(211px - 7.5vh) 5% 50px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -266,7 +266,7 @@ nav a:hover {
 .folders-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem 2rem;
+  gap: 2rem 2rem;
   max-width: 1920px;
   margin: 0 auto;
   padding-bottom: 5rem;
