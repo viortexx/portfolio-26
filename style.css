@@ -262,6 +262,10 @@ nav a:hover {
   height: 100%;
   object-fit: cover;
 }
+.projects-reel-section {
+  padding-top: 7.5vh;
+  text-align: center;
+}
 
 .folders-grid {
   display: grid;
@@ -877,7 +881,9 @@ nav a:hover {
   .container {
     padding-top: calc(188px + 2.5vh);
   }
-  .project-page-section {
+  .project-page-section,
+  .projects-reel-section,
+  .about-section {
     padding-top: 0;
   }
   .project-page nav a {
