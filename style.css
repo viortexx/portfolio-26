@@ -875,10 +875,10 @@ nav a:hover {
 /* iPad Pro / Tablet Optimizations */
 @media (min-width: 769px) and (max-width: 1200px) {
   .container {
-    padding-top: 188px;
+    padding-top: calc(188px + 2.5vh);
   }
   .project-page-section {
-    padding-top: 2.5vh;
+    padding-top: 0;
   }
   .project-page nav a {
     font-size: 12pt;
