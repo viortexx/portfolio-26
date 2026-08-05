@@ -833,14 +833,13 @@ nav a:hover {
 
 /* Specific Layouts */
 .project-media-grid.layout-hero-left {
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .layout-hero-left .media-item:first-child {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  aspect-ratio: 9 / 16;
-  width: auto;
+  aspect-ratio: auto;
   height: 100%;
 }
 
