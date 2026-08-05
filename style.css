@@ -824,15 +824,23 @@ nav a:hover {
   /* 1920x1080 aspect ratio */
 }
 
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Specific Layouts */
 .project-media-grid.layout-hero-left {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
 }
 
 .layout-hero-left .media-item:first-child {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  aspect-ratio: auto;
+  aspect-ratio: 9 / 16;
+  width: auto;
   height: 100%;
 }
 

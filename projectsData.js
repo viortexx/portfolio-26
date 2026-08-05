@@ -2,6 +2,7 @@ const projectsData = {
   "WFI": {
     "title": "Women for Independence",
     "credits": [
+      { "label": "Client", "value": "Tv Cultura" },
       { "label": "Motion design", "value": "Vitória Coelho" },
       { "label": "Illustrations", "value": "Marina Quintanilha" },
       { "label": "Production", "value": "Multiverso Produções" },
@@ -37,9 +38,10 @@ const projectsData = {
   "Whales": {
     "title": "Whales of the Brazilian Coast",
     "credits": [
+      { "label": "Client", "value": "g1 (Globo TV)" },
       { "label": "Motion Design", "value": "Vitória Coelho" },
       { "label": "Illustrations", "value": "Luisa Rivas" },
-      { "label": "Production and voiceover", "value": "Mariana Mendicelli (g1)" }
+      { "label": "Production and voiceover", "value": "Mariana Mendicelli" }
     ],
     "description": "This is a video made with the Art Department of g1 news portal (part of brazilian TV channel GloboTV) about the migration and annual appearance of humpback and right whales around the brazilian coast.",
     "media": [
@@ -56,10 +58,10 @@ const projectsData = {
     ]
   },
   "NFL": {
-    "title": "Superbowl XL | geTV",
+    "title": "NFL Superbowl XL",
     "credits": [
-      { "label": "Art Direction", "value": "Vitória Coelho" },
       { "label": "Client", "value": "geTV" },
+      { "label": "Art Direction", "value": "Vitória Coelho" },
       { "label": "Motion Design", "value": "Thales Cardoso" },
       { "label": "Production", "value": "Dave Avigdor" }
     ],
@@ -75,7 +77,7 @@ const projectsData = {
     ]
   },
   "American-Elections": {
-    "title": "2024 American Elections | g1",
+    "title": "2024 American Elections",
     "credits": [
       { "label": "Client", "value": "g1 (Globo TV)" },
       { "label": "Art Direction and Motion Design", "value": "Vitória Coelho" },
@@ -96,6 +98,7 @@ const projectsData = {
     "title": "Stormwind Studios",
     "layout": "2x2-autoplay",
     "credits": [
+      { "label": "Client", "value": "StormWind Studios" },
       { "label": "Art Direction and Motion Design", "value": "Vitória Coelho" },
       { "label": "Production", "value": "Letícia Zampieri" }
     ],
@@ -110,10 +113,10 @@ const projectsData = {
   "Safespace": {
     "title": "Safespace",
     "credits": [
+      { "label": "Client", "value": "SafeSpace Platform" },
       { "label": "Motion Design", "value": "Vitória Coelho" },
       { "label": "Illustration", "value": "Gabriel Wesley" },
       { "label": "Production", "value": "Rafaela Frankenthal" },
-      { "label": "Voiceover", "value": "AI (Google AI Studio)" }
     ],
     "description": "SafeSpace is a technology company that operates in the fields of Compliance and Human Resources with the purpose of being an ally in creating ethical, safe, and inclusive work environments. They approched me to collaborate with their SafeLearning Academy training videos.",
     "media": [
@@ -133,8 +136,8 @@ const projectsData = {
     ],
     "description": "These visuals are part of a personal project, inspired by a friend's tattoo. They were created to be like a set of screens that could be used for concerts.",
     "media": [
-      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Wide-2.gif" },
       { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Vertical_2.gif" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Wide-2.gif" },
       { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_Palco.gif" },
       { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_3DTriple.gif" },
       { "type": "image", "src": "./ASSETS/PROJECTS/Heartchain-Screens/HEARTCHAIN_3DSolo_1.gif" }
