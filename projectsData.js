@@ -29,10 +29,10 @@ const projectsData = {
     "description": "Lyric video project for the song Cigana by Baco Exu do Blues.",
     "media": [
       { "type": "video", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Cigana-Lyrics_BACOEXU_1.mp4" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still1_Cigana.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still2_Cigana.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still3_Cigana.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still4_Cigana.png" }
+      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still1_Cigana.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still2_Cigana.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still3_Cigana.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/Cigana-Lyrics/Still4_Cigana.webp" }
     ]
   },
   "Whales": {
@@ -68,12 +68,12 @@ const projectsData = {
     "description": "I worked as the sole Art Director for geTV (part of Globo TV's network), creating this and many other advertisements to promote their brand-new YouTube channel. This particular piece was created to announce their broadcast of Super Bowl XL.",
     "media": [
       { "type": "video", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/Masthead_NFL_1.mp4" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still1_NFL-Masthead.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still2_NFL-Masthead.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still3_NFL-Masthead.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still4_NFL-Masthead.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still5_NFL-Masthead.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still6_NFL-Masthead.png" }
+      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still1_NFL-Masthead.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still2_NFL-Masthead.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still3_NFL-Masthead.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still4_NFL-Masthead.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still5_NFL-Masthead.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/getv-superbowl-xl/still6_NFL-Masthead.webp" }
     ]
   },
   "American-Elections": {
@@ -152,10 +152,10 @@ const projectsData = {
     "description": "This is an experimental lyric video made for personal studies purposes only.",
     "media": [
       { "type": "video", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Lyric video_Maneskin_1.mp4" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still1_MANESKIN.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still2_MANESKIN.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still3_MANESKIN.png" },
-      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still4_MANESKIN.png" }
+      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still1_MANESKIN.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still2_MANESKIN.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still3_MANESKIN.webp" },
+      { "type": "image", "src": "./ASSETS/PROJECTS/I-wanna-be-your-slave-lyrics/Still4_MANESKIN.webp" }
     ]
   }
 };
